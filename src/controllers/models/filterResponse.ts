@@ -1,4 +1,3 @@
-
 export class FilterResponse {
     priceMin?: number;
     priceMax?: number;

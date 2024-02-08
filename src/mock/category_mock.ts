@@ -3,19 +3,19 @@ import { Category } from "../models/category";
 export const categories: Category[] = [
    {
       id: 1,
-      parentId: undefined,
+      parentId: null,
       name: "Свежие овощи, фрукты",
       icon: "https://arbuz.kz/image/s3/arbuz-kz-catalogs/225164-svezhie_ovoshi_i_frukty.svg",
    },
    {
       id: 2,
-      parentId: undefined,
+      parentId: null,
       name: "Молоко, сыр, масло, яйца",
       icon: "https://arbuz.kz/image/s3/arbuz-kz-catalogs/225161-moloko_syr_maslo_yaica.svg",
    },
    {
       id: 3,
-      parentId: undefined,
+      parentId: null,
       name: "Сладости",
       icon: "https://arbuz.kz/image/s3/arbuz-kz-catalogs/225166-sladosti.svg",
    },

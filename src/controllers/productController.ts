@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { categories } from "../mock/category_mock";
 import { products } from "../mock/product_mock";
 import { ProductResponse } from "./models/productResponse";
-import { FilterResponse } from "./models/FilterResponse";
+import { FilterResponse } from "./models/filterResponse";
 
 export const getProducts = (req: Request, res: Response) => {
    const {
@@ -13,7 +13,7 @@ export const getProducts = (req: Request, res: Response) => {
       priceTo,
       categoryId,
       brand,
-      text
+      text,
    }: {
       orderBy?: string;
       limit?: number;
@@ -22,14 +22,15 @@ export const getProducts = (req: Request, res: Response) => {
       priceTo?: number;
       categoryId?: number;
       brand?: string;
-      text?: string
+      text?: string;
    } = req.query;
-   console.log(brand);
 
    let filteredProducts = products;
-   if(text != null && text != ""){
-      console.log(filteredProducts);
-      filteredProducts = filteredProducts.filter(product => product.name.toLowerCase().startsWith(text.toLowerCase()))
+
+   if (text != null && text != "") {
+      filteredProducts = filteredProducts.filter((product) =>
+         product.name.toLowerCase().startsWith(text.toLowerCase())
+      );
    }
    if (priceFrom != null) {
       filteredProducts = filteredProducts.filter((p) => p.price >= priceFrom);
@@ -38,9 +39,14 @@ export const getProducts = (req: Request, res: Response) => {
       filteredProducts = filteredProducts.filter((p) => p.price <= priceTo);
    }
    if (categoryId != null) {
-      filteredProducts = filteredProducts.filter(
-         (p) => p.categoryId == categoryId
+      let _categories = JSON.parse(JSON.stringify(categories));
+      let categoriesIds = _categories
+         .filter((c: any) => c.parentId === Number(categoryId) || c.id === Number(categoryId))
+         .map((c: any) => c.id);
+      filteredProducts = filteredProducts.filter((p) =>
+         categoriesIds.includes(p.categoryId)
       );
+      
    }
    if (brand != null && brand != "") {
       filteredProducts = filteredProducts.filter((p) => p.brand == brand);
@@ -73,7 +79,7 @@ export const getProducts = (req: Request, res: Response) => {
 
 export const getProductById = (req: Request, res: Response) => {
    const { productId }: { productId?: number } = req.query;
-   if(productId == undefined) {
+   if (productId == undefined) {
       return res.status(404).send("Введите id продукта");
    }
 

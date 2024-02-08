@@ -807,4 +807,13 @@ export const products: Product[] = [
       image: "https://arbuz.kz/image/s3/arbuz-kz-products/247401-arbuz_zimnii_sort_sht.jpg?w=1100&h=1100&_c=1704339112",
       price: 5870,
    },
+   // {
+   //    id: 83,
+   //    categoryId: 5,
+   //    name: "",
+   //    message:"",
+   //    brand: "",
+   //    image: "",
+   //    price: ,
+   // },
 ];
