@@ -6,5 +6,22 @@
   {
     "userMail": "karinakk@mail.ru",
     "products": []
+  },
+  {
+    "userMail": "KKKKK@mail.ru",
+    "products": [
+      {
+        "count": 1,
+        "product": {
+          "id": 242,
+          "categoryId": 29,
+          "name": "Корм сухой Pro Plan",
+          "message": "Разработанный нашими ветеринарами и диетологами корм Purina® Pro Plan® с комплексом OPTIDERMA® обеспечивает улучшенное питание, которое поддерживает чувствительную кожу взрослых собак.",
+          "brand": "Pro Plan",
+          "image": "https://arbuz.kz/image/s3/arbuz-kz-products/246680-korm_suhoi_pro_plan_optidigest_adult_losos_dlya_shenkov_melkih_i_karlikovyh_porod_s_chuvstvitelnoi_k.jpg?w=360&h=360&_c=1706760337",
+          "price": 13454
+        }
+      }
+    ]
   }
 ]
