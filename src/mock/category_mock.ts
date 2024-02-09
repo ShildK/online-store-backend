@@ -112,7 +112,7 @@ export const categories: Category[] = [
    {
       id: 19,
       parentId: 13,
-      name: "Сосиски, сардельки",
+      name: "Сосиски",
       icon: "https://arbuz.kz/image/s3/arbuz-kz-catalogs/225180-sosiski_sardelki.png?w=140&h=%h&_c=1661257509",
    },
    {
@@ -142,7 +142,7 @@ export const categories: Category[] = [
    {
       id: 24,
       parentId: 15,
-      name: "Морепродукты",
+      name: "Дары моря",
       icon: "https://arbuz.kz/image/s3/arbuz-kz-catalogs/225174-moreprodukty.png?w=140&h=%h&_c=1661257383",
    },
    {

@@ -11,7 +11,7 @@
     "userMail": "KKKKK@mail.ru",
     "products": [
       {
-        "count": 1,
+        "count": 2,
         "product": {
           "id": 242,
           "categoryId": 29,
